@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>百度舆情</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/fullpage.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css"/>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.fullPage.js"></script>
+<script src="js/fullpage.js"></script>
+<body>
+<div class="header">
+	<div class="headerCon">
+		<div class="logo"></div>
+		<ul class="headerC">
+			<li><a href="">首页</a></li>
+			<li><a href="">产品介绍</a></li>
+			<li><a href="">用户版</a></li>
+		</ul>
+		<ul class="headerR">
+			<li><a href="">首页</a></li>
+			<li><a href="">产品介绍</a></li>
+			<li><a href="">用户版</a></li>
+		</ul>
+	</div>	
+</div>
+<div id="yuqing">
+    <div class="section">
+        <div class="yqCon">
+        	<img src="images/xhjt.png" class="xjt"/>
+        	<img src="images/1wz.png" class="zw1"/>
+        	<img src="images/fj1.png"class="fj"/>
+        	<img src="images/1c.png"class="bc"/>
+        	<img src="images/1bs1.png"class="bs1"/>
+        	<img src="images/1bs2.png"class="bs2"/>
+        	<img src="images/1bs3.png"class="bs3"/>
+        	<div class="zhao"></div>
+        	<div class="yunf">
+        		<!--<div class="yun1"></div>
+        		<div class="yun1s"></div>-->
+        		<img src="images/1yun.png"class="yun1"/>
+        		<img src="images/1yun.png"class="yun1s"/>
+        	</div>
+        	<div class="yunt">
+        		<!--<div class="yun2"></div>
+        		<div class="yun2s"></div>-->
+        		<img src="images/1yun2.png"class="yun2"/>
+        		<img src="images/1yun2.png"class="yun2s"/>
+        	</div>
+        	<div class="yunth">
+        		<!--<div class="yun2"></div>
+        		<div class="yun2s"></div>-->
+        		<img src="images/1yun3.png"class="yun3"/>
+        		<img src="images/1yun3.png"class="yun3s"/>
+        	</div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="yqCon">
+        	<img src="images/xhjt.png" class="xjt"/>
+        	<img src="images/21.png"class="tright"/>
+        	<img src="images/lx2.png"class="tleft"/>
+        	<div class="wz">
+        		<p class="title">数据收集与处理</p>
+        		<p class="con">15年专业数据收集与语义分析技术积累卓越极致，不断攀登</p>
+        	</div>
+        </div>
+        <div class="bottom">
+        		<div class="bottom1"></div>
+        		<div class="bottom2"></div>
+        		<div class="bottom3"></div>
+        		<div class="bottom4"></div>
+        		<div class="bottom5"></div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="yqCon">
+        	<img src="images/xhjt.png" class="xjt"/>
+        	<img src="images/3l.png"class="tright"/>
+        	<img src="images/qm4.png"class="tleft"/>
+        	<div class="tcenter">
+        		<div class="tcenter1"></div>
+        		<div class="tcenter2"></div>
+        		<div class="tcenter3"></div>
+        		<div class="tcenter4"></div>
+        		<div class="tcenter5"></div>
+        	</div>
+        	<div class="wz">
+        		<p class="title">舆情分析逻辑与架构</p>
+        		<p class="con">声量诊断、传播分析、情感提炼、受众画像有方法论，更有智慧</p>
+        	</div>
+        </div>
+        <img src="images/3bottom.png"class="bottom"/>
+    </div>
+    <div class="section">
+        <div class="yqCon">
+        	<img src="images/4t.png"class="tright"/>
+        	<img src="images/zy4.png"class="tleft"/>
+        	<img src="images/41.png"class="tcenter"/>
+        	<div class="wz">
+        		<p class="title">专业数据可视化</p>
+        		<p class="con">非凡的数据洞悉和可视化能力精研数据，惊艳所见</p>
+        	</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+$(function(){
+    $('#yuqing').fullpage({
+    	'navigation':true,
+    	'navigationTooltips':["登录百度舆情","领先：数据收集与处理","全面：舆情分析逻辑与架构","专业：专业数据可视化"],
+    	afterLoad:function(anchorLink,index){
+    		$(".yqCon").removeAttr("id");
+    		$(".yqCon").eq(index-1).attr("id","active");
+    	}
+    });
+    $(".xjt").click(function(){
+    	$.fn.fullpage.moveSectionDown();
+    })
+})
+</script>
